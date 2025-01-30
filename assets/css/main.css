@@ -18,39 +18,40 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #012970; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #4154f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --white: #ffffff; /* Background color for the entire website, including individual sections */
+  --grey: #cac4c4; /* Default color used for the majority of the text content across the entire website */
+  --dark-blue: #2C3E50; /* Color for headings, subheadings and title throughout the website */
+  --blue: #28598a; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --light-blue: #516b84; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --pink: #E74C3C; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --dark-grey: #8c8c8c; /*Accent color that represents */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #012970;  /* The default color of the main navmenu links */
-  --nav-hover-color: #4154f1; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #4154f1; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --dark-blue: #2C3E50;  /* The default color of the main navmenu links */
+  --pink: #E74C3C; /* Applied to main navmenu links when they are hovered over or active */
+  --light-grey: #ececec; /* Used as the background color for mobile navigation menu */
+  --light-grey: #ececec; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --dark-blue: #2C3E50; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --pink: #E74C3C; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
+/* .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
-}
+} */
 
-.dark-background {
+/* .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
+} */
 
 /* Smooth scroll */
 :root {
@@ -61,19 +62,19 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--grey);
+  background-color: var(--white);
   font-family: var(--default-font);
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--blue);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--pink), transparent 25%);
   text-decoration: none;
 }
 
@@ -83,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   font-family: var(--heading-font);
 }
 
@@ -111,7 +112,7 @@ h6 {
 
 .php-email-form .loading {
   display: none;
-  background: var(--surface-color);
+  background: var(--red);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -124,8 +125,8 @@ h6 {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
-  border-top-color: var(--surface-color);
+  border: 3px solid var(--blue);
+  border-top-color: var(--red);
   animation: php-email-form-loading 1s linear infinite;
 }
 
@@ -143,8 +144,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--grey);
+  background-color: var(--white);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -163,12 +164,12 @@ h6 {
   font-size: 30px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: var(--dark-blue);
 }
 
 /* .header .btn-login,
 .header .btn-login:focus {
-  color: var(--contrast-color);
+  color: var(--pink);
   background: var(--accent-color);
   font-size: 15px;
   padding: 8px 25px;
@@ -180,15 +181,13 @@ h6 {
 
 .header .btn-login:hover,
 .header .btn-login:focus:hover {
-  color: var(--contrast-color);
+  color: var(--pink);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 } */
 
-.header .btn-login,
-.hero .container .btn-get-started,
-.about .container .btn-get-started{
+button {
   color: #fff; /* Text color */
-  background: linear-gradient(90deg, var(--heading-color), var(--accent-color)); /* Gradient background */
+  background: linear-gradient(90deg, var(--dark-blue), var(--blue)); /* Gradient background */
   font-size: 16px;
   padding: 10px 30px;
   border: none;
@@ -199,12 +198,34 @@ h6 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
+button:hover {
+  background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slightly enlarges the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  color: #e8f5e9; /* Softer text color */
+}
+
+.header .btn-login,
+.hero .container .btn-get-started,
+.about .container .btn-get-started{
+  color: #fff; /* Text color */
+  background: linear-gradient(90deg, var(--dark-blue), var(--blue)); /* Gradient background */
+  font-size: 16px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.4s ease; /* Smooth transitions */
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
 .header .btn-login:hover,
 .hero .container .btn-get-started:hover,
 .about .container .btn-get-started:hover {
-  background: linear-gradient(90deg, var(--accent-color), var(--heading-color)); /* Reverse gradient on hover */
+  background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */
   transform: scale(1.1); /* Slightly enlarges the button */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
   color: #e8f5e9; /* Softer text color */
 }
 
@@ -226,7 +247,7 @@ h6 {
 
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.5);
 }
 
 /* Index Page Header
@@ -266,11 +287,11 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--blue);
     padding: 18px 12px;
     font-size: 18px;
     font-family: var(--nav-font);
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -293,13 +314,14 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--pink);
+    border-bottom: 4px solid #E74C3C;
   }
 
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background: rgba(255, 255, 255, 0.7);
     display: block;
     position: absolute;
     visibility: hidden;
@@ -309,7 +331,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
   }
 
   .navmenu .dropdown ul li {
@@ -320,7 +342,7 @@ h6 {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: var(--blue);
   }
 
   .navmenu .dropdown ul a i {
@@ -330,7 +352,7 @@ h6 {
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: var(--pink);
   }
 
   .navmenu .dropdown:hover>ul {
@@ -356,12 +378,17 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: var(--blue);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+  }
+
+  .mobile-nav-toggle:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    color: var(--pink); /* Softer text color */
   }
 
   .navmenu {
@@ -377,7 +404,7 @@ h6 {
     padding: 10px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    background-color: var(--light-grey);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -386,7 +413,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
+    color: var(--blue);
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
@@ -410,25 +437,26 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    background-color: color-mix(in srgb, var(--blue), transparent 90%);
   }
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    background-color: var(--blue);
+    color: var(--pink);
   }
 
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: var(--pink);
+    border-bottom: 3px solid #E74C3C !important;
   }
 
   .navmenu .active i,
   .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    background-color: var(--blue);
+    color: var(--pink);
     transform: rotate(180deg);
   }
 
@@ -438,8 +466,8 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: var(--light-grey);
+    border: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
@@ -489,7 +517,7 @@ h6 {
   .navmenu .listing-dropdown ul {
     margin: 0;
     padding: 10px;
-    background: var(--nav-dropdown-background-color);
+    background: var(--light-grey);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 130%;
@@ -511,15 +539,15 @@ h6 {
   .navmenu .listing-dropdown ul li:hover>a {
     padding: 10px 20px;
     font-size: 15px;
-    color: var(--nav-dropdown-color);
-    background-color: var(--nav-dropdown-background-color);
+    color: var(--dark-blue);
+    background-color: var(--light-grey);
   }
 
   .navmenu .listing-dropdown ul li a:hover,
   .navmenu .listing-dropdown ul li .active,
   .navmenu .listing-dropdown ul li .active:hover {
-    color: var(--nav-dropdown-hover-color);
-    background-color: var(--nav-dropdown-background-color);
+    color: var(--pink);
+    background-color: var(--light-grey);
   }
 
   .navmenu .listing-dropdown:hover>ul {
@@ -537,8 +565,8 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    background-color: var(--light-grey);
+    border: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
     box-shadow: none;
     transition: all 0.5s ease-in-out;
   }
@@ -557,17 +585,18 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--light-blue);
+  background: linear-gradient(180deg, var(--blue), var(--dark-blue)); /* Gradient background */
+  /* background-color: var(--light-grey); */
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
 }
 
 .footer .footer-newsletter {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
-  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--white), transparent 97%);
+  border-top: 1px solid color-mix(in srgb, var(--white), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--white), transparent 85%);
   padding: 50px 0;
 }
 
@@ -580,8 +609,8 @@ h6 {
   margin-bottom: 15px;
   padding: 6px 8px;
   position: relative;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  background-color: color-mix(in srgb, var(--white), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   transition: 0.3s;
@@ -589,15 +618,15 @@ h6 {
 }
 
 .footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
+  border-color: var(--white);
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email] {
   border: 0;
   padding: 4px;
   width: 100%;
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--white), transparent 50%);
+  color: var(--grey);
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
@@ -609,14 +638,14 @@ h6 {
   font-size: 16px;
   padding: 0 20px;
   margin: -7px -8px -7px 0;
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--blue);
+  color: var(--pink);
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--blue), transparent 20%);
 }
 
 .footer .footer-top {
@@ -630,17 +659,17 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--white), transparent 40%);
+  border: 1px solid color-mix(in srgb, var(--white), transparent 30%);
   font-size: 16px;
-  color: var(--accent-color);
+  color: var(--blue);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 .footer h4 {
@@ -648,6 +677,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: var(--white);
 }
 
 .footer .footer-links {
@@ -664,7 +694,7 @@ h6 {
   margin-right: 3px;
   font-size: 12px;
   line-height: 0;
-  color: var(--accent-color);
+  color: var(--light-grey);
 }
 
 .footer .footer-links ul li {
@@ -679,16 +709,16 @@ h6 {
 
 .footer .footer-links ul a {
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--light-grey), transparent 20%);
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--pink);
 }
 
 .footer .footer-about a {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   font-size: 24px;
   font-weight: 600;
   font-family: var(--heading-font);
@@ -701,7 +731,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--light-grey), transparent 90%);
 }
 
 .footer .copyright p {
@@ -723,7 +753,8 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  /* background-color: var(--blue); */
+  background-color: color-mix(in srgb, var(--grey), transparent 30%);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -731,14 +762,15 @@ h6 {
 }
 
 .scroll-top i {
-  font-size: 24px;
-  color: var(--contrast-color);
+  font-size: 34px;
+  font-weight: 900 !important;
+  color: var(--pink);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--blue), transparent 20%);
+  color: var(--pink);
 }
 
 .scroll-top.active {
@@ -759,14 +791,14 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--grey);
+  background-color: var(--white);
   position: relative;
 }
 
 .page-title .heading {
   padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
 }
 
 .page-title .heading h1 {
@@ -775,7 +807,7 @@ h6 {
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, var(--grey), transparent 95%);
   padding: 20px 0;
 }
 
@@ -796,7 +828,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--grey), transparent 70%);
 }
 
 /*--------------------------------------------------------------
@@ -804,8 +836,8 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--grey);
+  background-color: var(--white);
   padding: 60px 0;
   scroll-margin-top: 98px;
   overflow: clip;
@@ -834,8 +866,8 @@ section,
   font-weight: 700;
   padding: 8px 20px;
   margin: 0;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background: color-mix(in srgb, var(--blue), transparent 90%);
+  color: var(--blue);
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -843,7 +875,7 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   margin: 10px 0 0 0;
   font-size: 32px;
   font-weight: 700;
@@ -851,7 +883,7 @@ section,
 }
 
 .section-title p .description-title {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 /*--------------------------------------------------------------
@@ -873,18 +905,20 @@ section,
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
+  color: var(--blue);
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  /* color: color-mix(in srgb, var(--grey), transparent 30%); */
+  color: var(--dark-grey);
   margin: 5px 0 30px 0;
   font-size: 20px;
   font-weight: 400;
 }
 
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+/* .hero .btn-get-started {
+  color: var(--pink);
+  background: var(--blue);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -905,24 +939,24 @@ section,
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--pink);
+  background: color-mix(in srgb, var(--blue), transparent 15%);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 .hero .btn-get-started:hover i {
   transform: translateX(5px);
-}
+} */
 
 .hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
-  color: var(--default-color);
+  color: var(--dark-grey);
   font-weight: 600;
 }
 
 .hero .btn-watch-video i {
-  color: var(--accent-color);
+  color: var(--blue);
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -930,11 +964,12 @@ section,
 }
 
 .hero .btn-watch-video:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  /* color: color-mix(in srgb, var(--blue), transparent 15%); */
+  color: var(--dark-grey);
 }
 
 .hero .animated {
@@ -968,30 +1003,32 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  background-color: color-mix(in srgb, var(--blue), transparent 95%);
   padding: 40px;
 }
 
 .about .content h3 {
   font-size: 14px;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--light-blue);
   text-transform: uppercase;
 }
 
 .about .content h2 {
   font-size: 24px;
   font-weight: 700;
+  color: var(--blue);
 }
 
 .about .content p {
   margin: 15px 0 30px 0;
-  line-height: 24px;
+  line-height: 24px;  
+  color: var(--dark-grey);
 }
 
 .about .content .btn-read-more {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--pink);
+  background: var(--blue);
   line-height: 0;
   padding: 15px 40px;
   border-radius: 4px;
@@ -1020,8 +1057,9 @@ section,
 # Values Section
 --------------------------------------------------------------*/
 .values .card {
-  background-color: var(--surface-color);
-  color: var(--default-color);
+  /* background-color: var(--light-blue); */
+  background-color: color-mix(in srgb, var(--light-grey), transparent 10%);
+  color: var(--grey);
   padding: 30px;
   box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -1042,6 +1080,11 @@ section,
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 18px;
+  color: var(--blue);
+}
+
+.values .card p {
+  color: var(--dark-grey);
 }
 
 .values .card:hover {
@@ -1056,20 +1099,21 @@ section,
 # Stats Section
 --------------------------------------------------------------*/
 .stats .stats-item {
-  background-color: var(--surface-color);
+  /* background-color: var(--light-grey); */
+  background-color: color-mix(in srgb, var(--blue), transparent 30%);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
 .stats .stats-item i {
-  color: var(--accent-color);
+  color: var(--blue);
   font-size: 42px;
   line-height: 0;
   margin-right: 20px;
 }
 
 .stats .stats-item span {
-  color: var(--heading-color);
+  color: var(--white);
   font-size: 36px;
   display: block;
   font-weight: 600;
@@ -1080,14 +1124,15 @@ section,
   margin: 0;
   font-family: var(--heading-font);
   font-size: 16px;
+  color: var(--light-grey);
 }
 
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
-.features .feature-box {
+/* .features .feature-box {
   padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.9);
   transition: 0.3s;
   height: 100%;
 }
@@ -1098,9 +1143,13 @@ section,
   margin: 0;
 }
 
+.features .feature-box p {
+  color: var(--dark-grey);
+}
+
 .features .feature-box i {
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  color: var(--accent-color);
+  background: color-mix(in srgb, var(--pink), transparent 92%);
+  color: var(--blue);
   line-height: 0;
   padding: 4px;
   margin-right: 10px;
@@ -1110,9 +1159,9 @@ section,
 }
 
 .features .feature-box:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
+  background: var(--blue);
+  color: var(--pink);
+} */
 
 /*--------------------------------------------------------------
 # Alt Features Section
@@ -1125,18 +1174,20 @@ section,
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 10px 0;
+  color: var(--blue);
 }
 
 .alt-features .icon-box i {
   font-size: 44px;
   line-height: 44px;
-  color: var(--accent-color);
+  color: var(--dark-blue);
   margin-right: 15px;
 }
 
 .alt-features .icon-box p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--dark-grey);
+  /* color: color-mix(in srgb, var(--grey), transparent 30%); */
   margin-bottom: 0;
 }
 
@@ -1144,7 +1195,8 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
-  background-color: var(--surface-color);
+  /* background-color: var(--light-blue); */
+  background-color: color-mix(in srgb, var(--grey), transparent 50%);
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
   height: 100%;
   padding: 60px 30px;
@@ -1155,6 +1207,7 @@ section,
 
 .services .service-item .icon {
   font-size: 36px;
+  color: var(--pink);
   padding: 20px 20px;
   border-radius: 4px;
   position: relative;
@@ -1167,6 +1220,11 @@ section,
 .services .service-item h3 {
   font-size: 24px;
   font-weight: 700;
+  color: var(--blue);
+}
+
+.services .service-item p{
+  color: var(--dark-grey);
 }
 
 .services .service-item .read-more {
@@ -1184,24 +1242,24 @@ section,
   font-size: 18px;
 }
 
-.services .service-item.item-cyan {
-  border-bottom: 3px solid #0dcaf0;
+.services .service-item.item-pink {
+  border-bottom: 5px solid var(--pink);
 }
 
-.services .service-item.item-cyan .icon {
-  color: #0dcaf0;
-  background: rgba(13, 202, 240, 0.1);
+.services .service-item.item-pink .icon {
+  color: var(--pink);
+  background: rgba(231, 76, 60, 0.1);
 }
 
-.services .service-item.item-cyan .read-more {
-  color: #0dcaf0;
+.services .service-item.item-pink .read-more {
+  color: var(--pink);
 }
 
-.services .service-item.item-cyan:hover {
-  background: #0dcaf0;
+.services .service-item.item-pink:hover {
+  background: var(--pink);
 }
 
-.services .service-item.item-orange {
+/* .services .service-item.item-orange {
   border-bottom: 3px solid #fd7e14;
 }
 
@@ -1284,123 +1342,21 @@ section,
 
 .services .service-item.item-pink:hover {
   background: #f3268c;
-}
+} */
 
 .services .service-item:hover h3,
-.services .service-item:hover p,
 .services .service-item:hover .read-more {
   color: #fff;
+}
+
+.services .service-item:hover p {
+  color: var(--light-grey);
 }
 
 .services .service-item:hover .icon {
   background: #fff;
 }
 
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-tem {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  padding: 40px 20px;
-  text-align: center;
-  border-radius: 4px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s;
-  height: 100%;
-}
-
-@media (min-width: 1200px) {
-  .pricing .pricing-tem:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.pricing h3 {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.pricing .price {
-  font-size: 36px;
-  color: var(--heading-color);
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.pricing .price sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing .price span {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing .icon {
-  padding: 20px 0;
-}
-
-.pricing .icon i {
-  font-size: 48px;
-}
-
-.pricing ul {
-  padding: 0;
-  list-style: none;
-  color: var(--default-color);
-  text-align: center;
-  line-height: 26px;
-  font-size: 16px;
-  margin-bottom: 25px;
-}
-
-.pricing ul li {
-  padding-bottom: 10px;
-}
-
-.pricing ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-  text-decoration: line-through;
-}
-
-.pricing .btn-buy {
-  display: inline-block;
-  padding: 8px 40px 10px 40px;
-  border-radius: 50px;
-  color: var(--accent-color);
-  transition: none;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  transition: 0.3s;
-  border: 1px solid var(--accent-color);
-}
-
-.pricing .btn-buy:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .featured {
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
 
 /*--------------------------------------------------------------
 # Faq Section
@@ -1408,7 +1364,7 @@ section,
 .faq .faq-container .faq-item {
   position: relative;
   padding: 20px 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--grey), transparent 85%);
   overflow: hidden;
 }
 
@@ -1428,12 +1384,12 @@ section,
 }
 
 .faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
+  color: var(--blue);
   padding-right: 5px;
 }
 
 .faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .faq .faq-container .faq-item .faq-content {
@@ -1447,6 +1403,7 @@ section,
 .faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
+  color: var(--dark-grey);
 }
 
 .faq .faq-container .faq-item .faq-toggle {
@@ -1457,14 +1414,15 @@ section,
   line-height: 0;
   transition: 0.3s;
   cursor: pointer;
+  color: var(--dark-grey);
 }
 
 .faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .faq .faq-container .faq-active .faq-content {
@@ -1476,13 +1434,13 @@ section,
 
 .faq .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
+/* .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
@@ -1503,7 +1461,7 @@ section,
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .portfolio .portfolio-filters li:first-child {
@@ -1546,7 +1504,7 @@ section,
   font-weight: 400;
   color: #ffffff;
   display: inline-block;
-  background-color: var(--accent-color);
+  background-color: var(--blue);
 }
 
 .portfolio .portfolio-content .portfolio-info p {
@@ -1574,7 +1532,7 @@ section,
 
 .portfolio .portfolio-content .portfolio-info .preview-link:hover,
 .portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .portfolio .portfolio-content .portfolio-info .details-link {
@@ -1589,13 +1547,13 @@ section,
 
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
-}
+} */
 
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
   padding: 30px;
@@ -1619,7 +1577,7 @@ section,
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
   border-radius: 50%;
-  border: 4px solid var(--background-color);
+  border: 4px solid var(--white);
   margin: 0 auto;
 }
 
@@ -1627,17 +1585,20 @@ section,
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
+  color: var(--white);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   margin: 0;
+  color: var(--grey);
 }
 
 .testimonials .testimonial-item p {
   font-style: italic;
   margin: 0 auto 15px auto;
+  color: var(--grey);
 }
 
 .testimonials .swiper-wrapper {
@@ -1652,12 +1613,12 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--grey), transparent 85%);
   opacity: 1;
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--blue);
 }
 
 .testimonials .swiper-slide {
@@ -1708,7 +1669,7 @@ section,
   right: -1px;
   bottom: -1px;
   height: 100%;
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   -webkit-mask: url("../img/team-shape.svg") no-repeat center bottom;
   mask: url("../img/team-shape.svg") no-repeat center bottom;
   -webkit-mask-size: contain;
@@ -1723,13 +1684,13 @@ section,
   opacity: 0;
   border-radius: 4px;
   transition: 0.5s;
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  background: color-mix(in srgb, var(--white), transparent 60%);
   z-index: 2;
 }
 
 .team .team-member .social a {
   transition: color 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--grey), transparent 50%);
   margin: 15px 12px;
   display: block;
   line-height: 0;
@@ -1737,7 +1698,7 @@ section,
 }
 
 .team .team-member .social a:hover {
-  color: var(--default-color);
+  color: var(--grey);
 }
 
 .team .team-member .social i {
@@ -1752,13 +1713,15 @@ section,
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
+  color: var(--pink);
 }
 
 .team .team-member .member-info span {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--light-blue);
+  /* color: color-mix(in srgb, var(--pink), transparent 50%); */
 }
 
 .team .team-member .member-info p {
@@ -1766,7 +1729,8 @@ section,
   font-size: 14px;
   padding-top: 15px;
   line-height: 26px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--dark-grey)
+  /* color: color-mix(in srgb, var(--grey), transparent 30%); */
 }
 
 .team .team-member:hover {
@@ -1780,131 +1744,24 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Clients Section
---------------------------------------------------------------*/
-.clients .swiper-slide img {
-  transition: 0.3s;
-  opacity: 0.5;
-}
-
-.clients .swiper-slide img:hover {
-  opacity: 1;
-}
-
-.clients .swiper-wrapper {
-  height: auto;
-}
-
-.clients .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  opacity: 1;
-  background-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Recent Posts Section
---------------------------------------------------------------*/
-.recent-posts .post-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-}
-
-.recent-posts .post-item .post-img img {
-  transition: 0.5s;
-}
-
-.recent-posts .post-item .post-date {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  text-transform: uppercase;
-  font-size: 13px;
-  padding: 6px 12px;
-  font-weight: 500;
-}
-
-.recent-posts .post-item .post-content {
-  padding: 30px;
-}
-
-.recent-posts .post-item .post-title {
-  color: var(--heading-color);
-  font-size: 20px;
-  font-weight: 700;
-  transition: 0.3s;
-  margin-bottom: 15px;
-}
-
-.recent-posts .post-item .meta i {
-  font-size: 16px;
-  color: var(--accent-color);
-}
-
-.recent-posts .post-item .meta span {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.recent-posts .post-item hr {
-  color: color-mix(in srgb, var(--default-color), transparent 80%);
-  margin: 20px 0;
-}
-
-.recent-posts .post-item .readmore {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  line-height: 1;
-  transition: 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.recent-posts .post-item .readmore i {
-  line-height: 0;
-  margin-left: 6px;
-  font-size: 16px;
-}
-
-.recent-posts .post-item:hover .post-title,
-.recent-posts .post-item:hover .readmore {
-  color: var(--accent-color);
-}
-
-.recent-posts .post-item:hover .post-img img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-item {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  background: color-mix(in srgb, var(--grey), transparent 96%);
   padding: 30px;
 }
 
 .contact .info-item i {
   font-size: 38px;
   line-height: 0;
-  color: var(--accent-color);
+  color: var(--pink);
 }
 
 .contact .info-item h3 {
   font-size: 20px;
   font-weight: 700;
   margin: 20px 0 10px 0;
+  color: var(--blue);
 }
 
 .contact .info-item p {
@@ -1912,10 +1769,11 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: var(--dark-grey);
 }
 
 .contact .php-email-form {
-  background: color-mix(in srgb, var(--default-color), transparent 96%);
+  background: color-mix(in srgb, var(--grey), transparent 76%);
   padding: 30px;
   height: 100%;
 }
@@ -1927,34 +1785,51 @@ section,
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  color: var(--grey);
+  background-color: color-mix(in srgb, var(--white), transparent 50%);
+  border-color: color-mix(in srgb, var(--blue), transparent 50%);
 }
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
 .contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
+  border-color: var(--blue);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: color-mix(in srgb, var(--dark-grey), transparent 50%);
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  /* background: var(--blue);
+  color: var(--pink);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 4px; */
+  color: #fff; /* Text color */
+  background: linear-gradient(90deg, var(--dark-blue), var(--blue)); /* Gradient background */
+  font-size: 16px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.4s ease; /* Smooth transitions */
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
+
+
+
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  /* background: color-mix(in srgb, var(--blue), transparent 20%); */
+  background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slightly enlarges the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  color: #e8f5e9; /* Softer text color */
 }
 
 /*--------------------------------------------------------------
@@ -1972,16 +1847,16 @@ section,
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--grey), transparent 85%);
   opacity: 1;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--blue);
 }
 
 .portfolio-details .portfolio-info {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   padding: 30px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
 }
@@ -1991,7 +1866,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-bottom: 1px solid color-mix(in srgb, var(--grey), transparent 85%);
 }
 
 .portfolio-details .portfolio-info ul {
@@ -2016,14 +1891,14 @@ section,
 
 .portfolio-details .portfolio-description p {
   padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--grey), transparent 30%);
 }
 
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
 .service-details .service-box {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   padding: 20px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
@@ -2035,18 +1910,18 @@ section,
 .service-details .service-box h4 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 2px solid color-mix(in srgb, var(--grey), transparent 92%);
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
 
 .service-details .services-list {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
 }
 
 .service-details .services-list a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  color: color-mix(in srgb, var(--grey), transparent 20%);
+  background-color: color-mix(in srgb, var(--grey), transparent 96%);
   display: flex;
   align-items: center;
   padding: 12px 15px;
@@ -2061,30 +1936,30 @@ section,
 .service-details .services-list a i {
   font-size: 16px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .service-details .services-list a.active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+  color: var(--pink);
+  background-color: var(--blue);
 }
 
 .service-details .services-list a.active i {
-  color: var(--contrast-color);
+  color: var(--pink);
 }
 
 .service-details .services-list a:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-  color: var(--accent-color);
+  background-color: color-mix(in srgb, var(--blue), transparent 95%);
+  color: var(--blue);
 }
 
 .service-details .download-catalog a {
-  color: var(--default-color);
+  color: var(--grey);
   display: flex;
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -2099,16 +1974,16 @@ section,
 .service-details .download-catalog a i {
   font-size: 24px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .service-details .download-catalog a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .service-details .help-box {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--blue);
+  color: var(--pink);
   margin-top: 30px;
   padding: 30px 15px;
 }
@@ -2119,7 +1994,7 @@ section,
 
 .service-details .help-box h4,
 .service-details .help-box a {
-  color: var(--contrast-color);
+  color: var(--pink);
 }
 
 .service-details .services-img {
@@ -2150,7 +2025,7 @@ section,
 .service-details ul i {
   font-size: 20px;
   margin-right: 8px;
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 /*--------------------------------------------------------------
@@ -2164,7 +2039,7 @@ section,
 # Blog Posts Section
 --------------------------------------------------------------*/
 .blog-posts article {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 30px;
   height: 100%;
@@ -2184,17 +2059,17 @@ section,
 }
 
 .blog-posts .title a {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   transition: 0.3s;
 }
 
 .blog-posts .title a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .blog-posts .meta-top {
   margin-top: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
 }
 
 .blog-posts .meta-top ul {
@@ -2214,11 +2089,11 @@ section,
   font-size: 16px;
   margin-right: 8px;
   line-height: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--grey), transparent 20%);
 }
 
 .blog-posts .meta-top a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   font-size: 14px;
   display: inline-block;
   line-height: 1;
@@ -2233,8 +2108,8 @@ section,
 }
 
 .blog-posts .content .read-more a {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--blue);
+  color: var(--pink);
   display: inline-block;
   padding: 8px 30px;
   transition: 0.3s;
@@ -2243,7 +2118,7 @@ section,
 }
 
 .blog-posts .content .read-more a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--blue), transparent 20%);
 }
 
 /*--------------------------------------------------------------
@@ -2251,7 +2126,7 @@ section,
 --------------------------------------------------------------*/
 .blog-pagination {
   padding-top: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
 }
 
 .blog-pagination ul {
@@ -2267,7 +2142,7 @@ section,
 }
 
 .blog-pagination li a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   padding: 7px 16px;
   display: flex;
   align-items: center;
@@ -2276,13 +2151,13 @@ section,
 
 .blog-pagination li a.active,
 .blog-pagination li a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--blue);
+  color: var(--pink);
 }
 
 .blog-pagination li a.active a,
 .blog-pagination li a:hover a {
-  color: var(--contrast-color);
+  color: var(--pink);
 }
 
 /*--------------------------------------------------------------
@@ -2293,7 +2168,7 @@ section,
 }
 
 .blog-details .article {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -2304,7 +2179,7 @@ section,
 }
 
 .blog-details .title {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   font-size: 28px;
   font-weight: 700;
   padding: 0;
@@ -2323,7 +2198,7 @@ section,
 
 .blog-details .content blockquote {
   overflow: hidden;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: color-mix(in srgb, var(--grey), transparent 95%);
   padding: 60px;
   position: relative;
   text-align: center;
@@ -2331,7 +2206,7 @@ section,
 }
 
 .blog-details .content blockquote p {
-  color: var(--default-color);
+  color: var(--grey);
   line-height: 1.6;
   margin-bottom: 0;
   font-style: italic;
@@ -2346,14 +2221,14 @@ section,
   top: 0;
   bottom: 0;
   width: 3px;
-  background-color: var(--accent-color);
+  background-color: var(--blue);
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .blog-details .meta-top {
   margin-top: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
 }
 
 .blog-details .meta-top ul {
@@ -2373,11 +2248,11 @@ section,
   font-size: 16px;
   margin-right: 8px;
   line-height: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
 }
 
 .blog-details .meta-top a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   font-size: 14px;
   display: inline-block;
   line-height: 1;
@@ -2385,21 +2260,21 @@ section,
 
 .blog-details .meta-bottom {
   padding-top: 10px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--grey), transparent 90%);
 }
 
 .blog-details .meta-bottom i {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   display: inline;
 }
 
 .blog-details .meta-bottom a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   transition: 0.3s;
 }
 
 .blog-details .meta-bottom a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .blog-details .meta-bottom .cats {
@@ -2426,7 +2301,7 @@ section,
 
 .blog-details .meta-bottom .tags li+li::before {
   padding-right: 6px;
-  color: var(--default-color);
+  color: var(--grey);
   content: ",";
 }
 
@@ -2446,7 +2321,7 @@ section,
 }
 
 .blog-author .author-container {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   padding: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
@@ -2461,7 +2336,7 @@ section,
   font-size: 20px;
   margin-bottom: 0px;
   padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--grey), transparent 20%);
 }
 
 .blog-author .social-links {
@@ -2469,13 +2344,13 @@ section,
 }
 
 .blog-author .social-links a {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  color: color-mix(in srgb, var(--grey), transparent 60%);
   margin-right: 5px;
 }
 
 .blog-author p {
   font-style: italic;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--grey), transparent 30%);
   margin-bottom: 0;
 }
 
@@ -2510,17 +2385,17 @@ section,
 
 .blog-comments .comment h5 a {
   font-weight: bold;
-  color: var(--default-color);
+  color: var(--grey);
   transition: 0.3s;
 }
 
 .blog-comments .comment h5 a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .blog-comments .comment h5 .reply {
   padding-left: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--grey), transparent 20%);
 }
 
 .blog-comments .comment h5 .reply i {
@@ -2530,7 +2405,7 @@ section,
 .blog-comments .comment time {
   display: block;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--grey), transparent 40%);
   margin-bottom: 5px;
 }
 
@@ -2546,7 +2421,7 @@ section,
 }
 
 .comment-form form {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   margin-top: 30px;
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -2562,29 +2437,29 @@ section,
 }
 
 .comment-form form input {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  background-color: var(--light-blue);
+  color: var(--grey);
+  border: 1px solid color-mix(in srgb, var(--grey), transparent 70%);
   font-size: 14px;
   border-radius: 4px;
   padding: 10px 10px;
 }
 
 .comment-form form input:focus {
-  color: var(--default-color);
-  background-color: var(--surface-color);
+  color: var(--grey);
+  background-color: var(--light-blue);
   box-shadow: none;
-  border-color: var(--accent-color);
+  border-color: var(--blue);
 }
 
 .comment-form form input::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--grey), transparent 50%);
 }
 
 .comment-form form textarea {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  background-color: var(--light-blue);
+  color: var(--grey);
+  border: 1px solid color-mix(in srgb, var(--grey), transparent 70%);
   border-radius: 4px;
   padding: 10px 10px;
   font-size: 14px;
@@ -2592,14 +2467,14 @@ section,
 }
 
 .comment-form form textarea:focus {
-  color: var(--default-color);
+  color: var(--grey);
   box-shadow: none;
-  border-color: var(--accent-color);
-  background-color: var(--surface-color);
+  border-color: var(--blue);
+  background-color: var(--light-blue);
 }
 
 .comment-form form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--grey), transparent 50%);
 }
 
 .comment-form form .form-group {
@@ -2610,27 +2485,27 @@ section,
   border-radius: 4px;
   padding: 10px 20px;
   border: 0;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
+  background-color: var(--blue);
+  color: var(--pink);
 }
 
 .comment-form form .btn-primary:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--pink);
+  background-color: color-mix(in srgb, var(--blue), transparent 20%);
 }
 
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widgets-container {
-  background-color: var(--surface-color);
+  background-color: var(--light-blue);
   padding: 30px;
   margin: 60px 0 30px 0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .widget-title {
-  color: var(--heading-color);
+  color: var(--dark-blue);
   font-size: 20px;
   font-weight: 700;
   padding: 0;
@@ -2646,8 +2521,8 @@ section,
 }
 
 .search-widget form {
-  background: var(--background-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  background: var(--white);
+  border: 1px solid color-mix(in srgb, var(--grey), transparent 70%);
   padding: 3px 10px;
   position: relative;
   transition: 0.3s;
@@ -2658,8 +2533,8 @@ section,
   padding: 4px;
   border-radius: 4px;
   width: calc(100% - 40px);
-  background-color: var(--background-color);
-  color: var(--default-color);
+  background-color: var(--white);
+  color: var(--grey);
 }
 
 .search-widget form input[type=text]:focus {
@@ -2667,8 +2542,8 @@ section,
 }
 
 .search-widget form button {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: var(--blue);
+  color: var(--pink);
   position: absolute;
   top: 0;
   right: 0;
@@ -2687,11 +2562,11 @@ section,
 }
 
 .search-widget form button:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--blue), transparent 20%);
 }
 
 .search-widget form:is(:focus-within) {
-  border-color: var(--accent-color);
+  border-color: var(--blue);
 }
 
 .categories-widget ul {
@@ -2709,17 +2584,17 @@ section,
 }
 
 .categories-widget ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb, var(--grey), transparent 20%);
   transition: 0.3s;
 }
 
 .categories-widget ul a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .categories-widget ul a span {
   padding-left: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--grey), transparent 50%);
   font-size: 14px;
 }
 
@@ -2744,19 +2619,19 @@ section,
 }
 
 .recent-posts-widget .post-item h4 a {
-  color: var(--default-color);
+  color: var(--grey);
   transition: 0.3s;
 }
 
 .recent-posts-widget .post-item h4 a:hover {
-  color: var(--accent-color);
+  color: var(--blue);
 }
 
 .recent-posts-widget .post-item time {
   display: block;
   font-style: italic;
   font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: color-mix(in srgb, var(--grey), transparent 50%);
 }
 
 .tags-widget {
@@ -2774,23 +2649,23 @@ section,
 }
 
 .tags-widget ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--grey), transparent 30%);
   font-size: 14px;
   padding: 6px 14px;
   margin: 0 6px 8px 0;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+  border: 1px solid color-mix(in srgb, var(--grey), transparent 60%);
   display: inline-block;
   transition: 0.3s;
 }
 
 .tags-widget ul a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border: 1px solid var(--accent-color);
+  background: var(--blue);
+  color: var(--pink);
+  border: 1px solid var(--blue);
 }
 
 .tags-widget ul a span {
   padding-left: 5px;
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  color: color-mix(in srgb, var(--grey), transparent 60%);
   font-size: 14px;
 }

@@ -4,9 +4,9 @@
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
                 <a href="index.html" class="d-flex align-items-center">
-                    <span class="sitename">FlexStart</span>
+                    <span class="sitename" style="color: white">Gas By Gas</span>
                 </a>
-                <div class="footer-contact pt-3">
+                <div class="footer-contact pt-3" style="color: var(--light-grey)">
                     <p>123 T B Jaya Mw.</p>
                     <p>Colombo, SL</p>
                     <p class="mt-3"><strong>Phone:</strong> <span>+94 77 123 4567</span></p>
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
+    <div class="container copyright text-center mt-4" style="color: var(--light-grey)">
         <p>© <span>Copyright</span> <strong class="px-1 sitename">GasByGas</strong> <span>All Rights
                 Reserved</span></p>
         <div class="credits">
