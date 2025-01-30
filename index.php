@@ -385,7 +385,7 @@
                 <div class="row gy-4">
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-item item-cyan position-relative">
+                        <div class="service-item item-pink position-relative">
                             <i class="bi bi-activity icon"></i>
                             <h3>Request Gas</h3>
                             <p>Easily place gas orders through our website or mobile app, allowing you to request the
@@ -396,7 +396,7 @@
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-item item-orange position-relative">
+                        <div class="service-item item-pink position-relative">
                             <i class="bi bi-broadcast icon"></i>
                             <h3>Track Delivery</h3>
                             <p>Keep track of your gas order in real-time, from dispatch to delivery, ensuring you're
@@ -407,7 +407,7 @@
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-item item-teal position-relative">
+                        <div class="service-item item-pink position-relative">
                             <i class="bi bi-easel icon"></i>
                             <h3>Payments</h3>
                             <p>Enjoy secure, hassle-free payment methods, including online and mobile payment options,
@@ -418,7 +418,7 @@
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-item item-red position-relative">
+                        <div class="service-item item-pink position-relative">
                             <i class="bi bi-bounding-box-circles icon"></i>
                             <h3>Check Availability</h3>
                             <p>Instantly check the availability of gas in your area, so you can plan ahead and avoid any
@@ -429,7 +429,7 @@
                     </div><!-- End Service Item -->
 
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-item item-indigo position-relative">
+                        <div class="service-item item-pink position-relative">
                             <i class="bi bi-calendar4-week icon"></i>
                             <h3>Deliver Gas to the Nearest Outlet:</h3>
                             <p>We guarantee fast and reliable delivery to the nearest outlet in your area, ensuring a
