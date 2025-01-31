@@ -13,7 +13,7 @@
     <!-- Header -->
     <?php include 'assets/components/header.php'; ?>
 
-    <div class="container py-5 d-flex justify-content-center">
+    <div class="container d-flex justify-content-center" style="padding-top: 120px">
         <div class="card p-4 shadow-lg" style="max-width: 800px; width: 100%;">
             <h2 class="text-center fw-bold">Where should we send the order?</h2>
 

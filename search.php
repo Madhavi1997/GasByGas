@@ -14,7 +14,7 @@
     <!-- Header -->
     <?php include 'assets/components/header.php'; ?>
 
-    <div class="container py-5">
+    <div class="container" style="padding-top: 120px">
         <h2 class="text-center fw-bold">Search your nearest Gas Outlet</h2>
         <p class="text-center">Select Outlet by District</p>
 
@@ -23,8 +23,31 @@
                 <label for="district" class="form-label">Select District</label>
                 <select id="district" class="form-select">
                     <option selected>Anuradhapura</option>
+                    <option>Ampra</option>
+                    <option>Badulla</option>
+                    <option>Batticaloa</option>
                     <option>Colombo</option>
+                    <option>Galle</option>
+                    <option>Gampaha</option>
+                    <option>hambantota</option>
+                    <option>Jaffna</option>
+                    <option>kaluthara</option>
                     <option>Kandy</option>
+                    <option>Kegalle</option>
+                    <option>Kilinochchi</option>
+                    <option>Kurunegala</option>
+                    <option>Mannar</option>
+                    <option>Matale</option>
+                    <option>Matara</option>
+                    <option>Monaragala</option>
+                    <option>Mullativu</option>
+                    <option>Nuwara Eliya</option>
+                    <option>Polonnaruwa</option>
+                    <option>Puttalam</option>
+                    <option>Rathnapura</option>
+                    <option>Trincomalee</option>
+                    <option>vavuniya</option>
+
                 </select>
             </div>
             <div class="col-md-4">
@@ -84,7 +107,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Proceed to Payment</button>
+                    <button type="button" class="btn btn-primary"><a href="order-review.php"style="color: white;">Procced To Payment</a></button>
                 </div>
             </div>
         </div>
