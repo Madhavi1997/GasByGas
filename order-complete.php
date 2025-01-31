@@ -13,7 +13,7 @@
     <!-- Header -->
     <?php include 'assets/components/header.php'; ?>
 
-    <div class="container my-5" style="padding-top: 120px;">
+    <div class="container" style="padding-top: 120px;">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card text-center border-success">

@@ -7,11 +7,13 @@
     <title>Schedule Delivery</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <!-- Header -->
     <?php include '../assets/components/header.php'; ?>
+    
 
     <div class="container py-5">
         <h2 class="text-center fw-bold">Schedule Delivery</h2>
