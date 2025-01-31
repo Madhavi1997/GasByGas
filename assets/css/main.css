@@ -1746,6 +1746,10 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
 .contact .info-item {
   background: color-mix(in srgb, var(--grey), transparent 96%);
   padding: 30px;
@@ -1780,6 +1784,7 @@ section,
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
+.contact .php-email-form input[type=password],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1787,17 +1792,20 @@ section,
   border-radius: 0;
   color: var(--grey);
   background-color: color-mix(in srgb, var(--white), transparent 50%);
+  color: var(--blue);
   border-color: color-mix(in srgb, var(--blue), transparent 50%);
 }
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type=password]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--blue);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type=password]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: color-mix(in srgb, var(--dark-grey), transparent 50%);
 }
@@ -1825,6 +1833,100 @@ section,
 
 
 .contact .php-email-form button[type=submit]:hover {
+  /* background: color-mix(in srgb, var(--blue), transparent 20%); */
+  background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */
+  transform: scale(1.1); /* Slightly enlarges the button */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  color: #e8f5e9; /* Softer text color */
+}
+
+/*--------------------------------------------------------------
+# Login Section
+--------------------------------------------------------------*/
+.login .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+.login .info-item {
+  background: color-mix(in srgb, var(--grey), transparent 96%);
+  padding: 30px;
+}
+
+.login .info-item i {
+  font-size: 38px;
+  line-height: 0;
+  color: var(--pink);
+}
+
+.login .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+  color: var(--blue);
+}
+
+.login .info-item p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--dark-grey);
+}
+
+.login .login-form {
+  background: color-mix(in srgb, var(--grey), transparent 76%);
+  padding: 30px;
+  height: 100%;
+}
+
+.login .login-form input[type=text],
+.login .login-form input[type=email],
+.login .login-form input[type=password],
+.login .login-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--grey);
+  background-color: color-mix(in srgb, var(--white), transparent 50%);
+  color: var(--blue);
+  border-color: color-mix(in srgb, var(--blue), transparent 50%);
+}
+
+.login .login-form input[type=text]:focus,
+.login .login-form input[type=email]:focus,
+.login .login-form input[type=password]:focus,
+.login .login-form textarea:focus {
+  border-color: var(--blue);
+}
+
+.login .login-form input[type=text]::placeholder,
+.login .login-form input[type=email]::placeholder,
+.login .login-form input[type=password]::placeholder,
+.login .login-form textarea::placeholder {
+  color: color-mix(in srgb, var(--dark-grey), transparent 50%);
+}
+
+.login .login-formform button[type=submit] {
+  /* background: var(--blue);
+  color: var(--pink);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 4px; */
+  color: #fff; /* Text color */
+  background: linear-gradient(90deg, var(--dark-blue), var(--blue)); /* Gradient background */
+  font-size: 16px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.4s ease; /* Smooth transitions */
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.login .login-form button[type=submit]:hover {
   /* background: color-mix(in srgb, var(--blue), transparent 20%); */
   background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */
   transform: scale(1.1); /* Slightly enlarges the button */
