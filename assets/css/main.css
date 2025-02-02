@@ -206,6 +206,7 @@ button:hover {
 }
 
 .header .btn-login,
+.product .btn-use,
 .hero .container .btn-get-started,
 .about .container .btn-get-started{
   color: #fff; /* Text color */
@@ -221,6 +222,7 @@ button:hover {
 }
 
 .header .btn-login:hover,
+.product .btn-use:hover,
 .hero .container .btn-get-started:hover,
 .about .container .btn-get-started:hover {
   background: linear-gradient(90deg, var(--blue), var(--dark-blue)); /* Reverse gradient on hover */

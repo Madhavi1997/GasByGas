@@ -41,8 +41,11 @@
       else if ($row['user_type'] == "Industrial") {
         header("location:index_industrial.php");
       }
+      else if ($row['user_type'] == "Outlet") {
+        header("location:index_outlet.php");
+      }
       else if ($row['user_type'] == "Admin") {
-        header("location:admin.php");
+        header("location:index_admin.php");
       }
       
     }

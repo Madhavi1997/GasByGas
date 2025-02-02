@@ -88,7 +88,8 @@
                                 </div>
                                 <div>
                                     <p style="color: var(--dark-grey);">Don't have an account?
-                                        <a href="#" style="color: var(--pink);" data-bs-toggle="modal" data-bs-target="#signupModal"><b>Register</b></a>
+                                        <a href="#" style="color: var(--pink);" data-bs-toggle="modal"
+                                            data-bs-target="#signupModal"><b>Register</b></a>
                                     </p>
                                 </div>
 
@@ -119,11 +120,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <p class="fw-semibold">I am a</p>
+                    <p class="fw-semibold" style="color: var(--dark-grey;)">Register as a:</p>
                     <div class="d-flex justify-content-center gap-3 my-3">
-                        <button class="btn "><a href="register_domestic_1.php" style="color: white;">Domestic Customer</a> </button>
-                        <button class="btn "><a href="register_industrial_1.php" style="color: white;">Industral Customer</a> </button>
-                        <button class="btn "><a href="register_outlet_1.php" style="color: white;">Outlet Manager</a> </button>
+                        <button class="btn "><a href="register_domestic_1.php" style="color: white;">Domestic
+                                Consumer</a> </button>
+                        <button class="btn "><a href="register_industrial_1.php" style="color: white;">Industrial
+                                Consumer</a> </button>
+                        <button class="btn "><a href="register_outlet_1.php" style="color: white;">Outlet</a> </button>
                     </div>
                 </div>
             </div>
