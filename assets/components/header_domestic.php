@@ -14,7 +14,7 @@
                     <a href="about.php">About</a>
                 </li>
                 <li>
-                    <a href="contact.php">Contact</a>
+                    <a href="delivery_view.php">Contact</a>
                 </li>
                 <li class="dropdown">
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="log_out.php">Log Out</a>
+                    <a href="logout.php">Log Out</a>
                 </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

@@ -12,7 +12,7 @@
 
 <body>
     <!-- Header -->
-    <?php include 'assets/components/header_domestic.php'; ?>
+    <?php include 'assets/components/header_outlet.php'; ?>
 
     <div class="container-fluid d-flex align-items-center" style="padding-top: 150px; padding-bottom: 200px;">
         <div class="row w-100">
@@ -26,35 +26,8 @@
                         <!-- District Selection -->
                         <div class="col-md-4">
                             <label for="district" class="form-label" style="color: var(--dark-grey)">Select
-                                District</label>
-                            <select name="district" class="form-select" style="border-color: var(--pink);" required>
-                                <option value="" selected disabled>Select a District</option>
-                                <option value="Ampara">Ampara</option>
-                                <option value="Anuradhapura">Anuradhapura</option>
-                                <option value="Badulla">Badulla</option>
-                                <option value="Batticaloa">Batticaloa</option>
-                                <option value="Colombo">Colombo</option>
-                                <option value="Galle">Galle</option>
-                                <option value="Gampaha">Gampaha</option>
-                                <option value="Hambantota">Hambantota</option>
-                                <option value="Jaffna">Jaffna</option>
-                                <option value="Kalutara">Kalutara</option>
-                                <option value="Kandy">Kandy</option>
-                                <option value="Kegalle">Kegalle</option>
-                                <option value="Kilinochchi">Kilinochchi</option>
-                                <option value="Kurunegala">Kurunegala</option>
-                                <option value="Mannar">Mannar</option>
-                                <option value="Matale">Matale</option>
-                                <option value="Matara">Matara</option>
-                                <option value="Monaragala">Monaragala</option>
-                                <option value="Mullaitivu">Mullaitivu</option>
-                                <option value="Nuwara Eliya">Nuwara Eliya</option>
-                                <option value="Polonnaruwa">Polonnaruwa</option>
-                                <option value="Puttalam">Puttalam</option>
-                                <option value="Ratnapura">Ratnapura</option>
-                                <option value="Trincomalee">Trincomalee</option>
-                                <option value="Vavuniya">Vavuniya</option>
-                            </select>
+                                First Name</label>
+                            <input type="text">
                         </div>
 
                         <!-- City Search Input -->

@@ -36,7 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sql_main = "INSERT INTO tbl_dom_cust (f_name, l_name, email, contact, NIC, add_1, city, district) VALUES ('$f_name', '$l_name', '$email', '$contact', '$NIC', '$add_1', '$city', '$district')";
         $sql_log = "INSERT INTO tbl_logs (user_name, access_code, user_type) VALUES ('$email', '$hashedPassword', '$user_type')";
     } else {
-        
     }
 
     echo "Main Query: $sql_main<br>";
@@ -102,22 +101,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-    <p>Dear '.$f_name.' '.$l_name.',</p>
+    <p>Dear ' . $f_name . ' ' . $l_name . ',</p>
         <p>Your Registration has been successful. Your Login Details are as follows</p>
         <ul>
-            <li><strong>Username:</strong> '.$email.'</li>
-            <li><strong>Password:</strong> '.$access_code.'</li>
+            <li><strong>Username:</strong> ' . $email . '</li>
+            <li><strong>Password:</strong> ' . $access_code . '</li>
             
         </ul>
         <p>If you have any questions or need to make changes, please contact us immediately.</p>
         <div class="footer">
-            <p>Thank you for choosing our taxi service.</p>
+            <p>Thank you for registering with us.</p>
             <p>Best regards,<br> City Taxi (PVT) LTD</p>
         </div>
         </div>';
-        
+
         $mail->send();
-      
+
 
         // Redirect to the login page if the insertion was successful
         session_start();
@@ -136,4 +135,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the database connection
 $mysqli->close();
-?>

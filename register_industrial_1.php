@@ -1,6 +1,6 @@
 <?php
 //Connect the database.
- require("assets/components/db_connection.php");
+require("assets/components/db_connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
     <div class="container-fluid d-flex align-items-center" style="padding-top: 100px;">
         <div class=" row w-100">
             <div class="col-md-6 bg-light d-flex align-items-center justify-content-center">
-                <div class="placeholder-image" style="width: 80%; height: 80%; background-color: #ddd;"></div>
+                <img src="assets/img/cyl_2.jpg" class="img-fluid animated" alt="">
             </div>
             <div class="col-md-6 p-5">
                 <h2 class="fw-bold">Sign Up - Industrial</h2>
@@ -101,34 +101,34 @@
 
                     <!-- Match Passwords -->
                     <script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        var passwordField = document.getElementById("password");
-                        var confirmPasswordField = document.getElementById(
-                            "confirm_password"); // Fix the case here
-                        var messageElement = document.getElementById(
-                            "passwordMatchMessage"); // Add an element to display the message
+                        document.addEventListener("DOMContentLoaded", function() {
+                            var passwordField = document.getElementById("password");
+                            var confirmPasswordField = document.getElementById(
+                                "confirm_password"); // Fix the case here
+                            var messageElement = document.getElementById(
+                                "passwordMatchMessage"); // Add an element to display the message
 
-                        function checkPasswords() {
-                            var password = passwordField.value;
-                            var confirm_password = confirmPasswordField.value;
+                            function checkPasswords() {
+                                var password = passwordField.value;
+                                var confirm_password = confirmPasswordField.value;
 
-                            if (password === confirm_password) {
-                                // Passwords match
-                                messageElement.innerHTML = "Passwords match";
-                                messageElement.style.color =
-                                    "green"; // Optional: Change the text color for a visual cue
-                            } else {
-                                // Passwords do not match
-                                messageElement.innerHTML = "Passwords do not match";
-                                messageElement.style.color =
-                                    "red"; // Optional: Change the text color for a visual cue
+                                if (password === confirm_password) {
+                                    // Passwords match
+                                    messageElement.innerHTML = "Passwords match";
+                                    messageElement.style.color =
+                                        "green"; // Optional: Change the text color for a visual cue
+                                } else {
+                                    // Passwords do not match
+                                    messageElement.innerHTML = "Passwords do not match";
+                                    messageElement.style.color =
+                                        "red"; // Optional: Change the text color for a visual cue
+                                }
                             }
-                        }
 
-                        // Add event listeners to both password and confirmPassword fields
-                        passwordField.addEventListener("input", checkPasswords);
-                        confirmPasswordField.addEventListener("input", checkPasswords);
-                    });
+                            // Add event listeners to both password and confirmPassword fields
+                            passwordField.addEventListener("input", checkPasswords);
+                            confirmPasswordField.addEventListener("input", checkPasswords);
+                        });
                     </script>
 
                     <div class="mb-3 form-check">

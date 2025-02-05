@@ -41,7 +41,7 @@
 <body class="index-page">
 
     <?php
-        include 'assets/components/header.php';
+    include 'assets/components/header.php';
     ?>
 
     <main class="main">
@@ -92,9 +92,9 @@
                                     <button id="reset" type="reset" style="margin-left: 10px;">Cancel</button>
                                 </div>
                                 <div>
-                                    <p style="color: var(--dark-grey);">Don't have an account? <a href="register_1.php"
-                                            style="color: var(--pink);"><b>
-                                                Register</b></a>
+                                    <p style="color: var(--dark-grey);">Don't have an account?
+                                        <a href="#" style="color: var(--pink);" data-bs-toggle="modal"
+                                            data-bs-target="#signupModal"><b>Register</b></a>
                                     </p>
                                 </div>
 
@@ -113,9 +113,30 @@
     </main>
 
     <?php
-            include 'assets/components/footer.php';
-            include 'assets/components/scroll_up.php';
-        ?>
+    include 'assets/components/footer.php';
+    include 'assets/components/scroll_up.php';
+    ?>
+
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="fw-semibold" style="color: var(--dark-grey;)">Register as a:</p>
+                    <div class="d-flex justify-content-center gap-3 my-3">
+                        <button class="btn "><a href="register_domestic_1.php" style="color: white;">Domestic
+                                Consumer</a> </button>
+                        <button class="btn "><a href="register_industrial_1.php" style="color: white;">Industrial
+                                Consumer</a> </button>
+                        <button class="btn "><a href="register_outlet_1.php" style="color: white;">Outlet</a> </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
