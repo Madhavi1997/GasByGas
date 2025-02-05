@@ -21,7 +21,7 @@ require("assets/components/db_connection.php");
     <div class="container-fluid d-flex align-items-center" style="padding-top: 100px;">
         <div class=" row w-100">
             <div class="col-md-6 bg-light d-flex align-items-center justify-content-center">
-                <img src="assets/img/cyl_2.jpg" class="img-fluid animated" alt="">
+                <div class="placeholder-image" style="width: 80%; height: 80%; background-color: #ddd;"></div>
             </div>
             <div class="col-md-6 p-5">
                 <h2 class="fw-bold">Sign Up - Outlet</h2>
@@ -38,53 +38,57 @@ require("assets/components/db_connection.php");
                                 placeholder="Outlet  Registration No." required>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <!-- <label class="form-label">Email</label> -->
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+
+                        <div class="col">
+                            <input type="text" name="contact" class="form-control" placeholder="Contact No" required>
+                        </div>
                     </div>
 
                     <div class="mb-3">
-                        <!-- <label class="form-label">Contact No.</label> -->
-                        <input type="text" name="contact" class="form-control" placeholder="Contact No" required>
-                    </div>
-                    <div class="mb-3">
-                        <!-- <label class="form-label">Address</label> -->
                         <input type="text" name="add_1" class="form-control" placeholder="Address" required>
                     </div>
-                    <div class="mb-3">
-                        <!-- <label class="form-label">City</label> -->
-                        <input type="text" name="city" class="form-control" placeholder="City" required>
-                    </div>
-                    <div class="mb-3">
-                        <!-- <label class="form-label">District</label> -->
-                        <!-- <input type="text" name="district" class="form-control" placeholder="District" required> -->
-                        <select name="district" class="form-select" placeholder="District" required>
-                            <option value="Ampara">Ampara</option>
-                            <option value="Anuradhapura">Anuradhapura</option>
-                            <option value="Badulla">Badulla</option>
-                            <option value="Batticaloa">Batticaloa</option>
-                            <option value="Colombo">Colombo</option>
-                            <option value="Galle">Galle</option>
-                            <option value="Gampaha">Gampaha</option>
-                            <option value="Hambantota">Hambantota</option>
-                            <option value="Jaffna">Jaffna</option>
-                            <option value="Kaluthara">Kaluthara</option>
-                            <option value="Kandy">Kandy</option>
-                            <option value="Kegalle">Kegalle</option>
-                            <option value="Kilinochchi">Kilinochchi</option>
-                            <option value="Kurunegala">Kurunegala</option>
-                            <option value="Mannar">Mannar</option>
-                            <option value="Matale">Matale</option>
-                            <option value="Matara">Matara</option>
-                            <option value="Monaragala">Monaragala</option>
-                            <option value="Mullativu">Mullativu</option>
-                            <option value="Nuwara Eliya">Nuwara Eliya</option>
-                            <option value="Polonnaruwa">Polonnaruwa</option>
-                            <option value="Puttalam">Puttalam</option>
-                            <option value="Rathnapura">Rathnapura</option>
-                            <option value="Trincomalee">Trincomalee</option>
-                            <option value="Vavuniya">Vavuniya</option>
-                        </select>
+                    <div class="row mb-3">
+
+                        <div class="col-md-6">
+                            <select id="district" class="form-select">
+                                <option selected>Select District</option>
+                                <option>Ampra</option>
+                                <option>Anuradhapura</option>
+                                <option>Badulla</option>
+                                <option>Batticaloa</option>
+                                <option>Colombo</option>
+                                <option>Galle</option>
+                                <option>Gampaha</option>
+                                <option>hambantota</option>
+                                <option>Jaffna</option>
+                                <option>kaluthara</option>
+                                <option>Kandy</option>
+                                <option>Kegalle</option>
+                                <option>Kilinochchi</option>
+                                <option>Kurunegala</option>
+                                <option>Mannar</option>
+                                <option>Matale</option>
+                                <option>Matara</option>
+                                <option>Monaragala</option>
+                                <option>Mullativu</option>
+                                <option>Nuwara Eliya</option>
+                                <option>Polonnaruwa</option>
+                                <option>Puttalam</option>
+                                <option>Rathnapura</option>
+                                <option>Trincomalee</option>
+                                <option>vavuniya</option>
+
+                            </select>
+                        </div>
+
+                        <div class="col-md-6">
+                            <input type="text" name="city" class="form-control" placeholder="City" required>
+                        </div>
+
                     </div>
                     <div class="mb-3 position-relative">
                         <!-- <label class="form-label">Password</label> -->

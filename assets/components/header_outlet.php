@@ -20,10 +20,10 @@
                     <a href="#"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                     <ul>
                         <li>
-                            <a href="outlet_request.php">Request Gas</a>
+                            <a href="request_search_1.php">Request Gas</a>
                         </li>
                         <li>
-                            <a href="outlet_request_view.php">Request History</a>
+                            <a href="request_view.php">Request History</a>
                         </li>
                         <li>
                             <a href="#">Track your Delivery</a>

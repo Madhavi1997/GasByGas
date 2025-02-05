@@ -1,40 +1,61 @@
 <?php
-session_start();
+//Start the session
+ session_start();
+ 
+  //Calling connect to db_connection
+  require("assets/components/db_connection.php");
 
-require("assets/components/db_connection.php");
+  //Copy the credentials provided by the user
+  $user_name    = $_REQUEST['user_name'];
+  $access_code  = $_REQUEST['access_code'];
+  // $user_type    = $_REQUEST['user_type'];
 
-$user_name    = $_REQUEST['user_name'];
-$access_code  = $_REQUEST['access_code'];
+  //Search for the provided user name in the database under the table "tbl_logs"
+  $sql = "SELECT user_name, access_code, user_type from tbl_logs where user_name='$user_name'";
 
-$sql = "SELECT user_name, access_code, user_type from tbl_logs where user_name='$user_name'";
+  $result = $mysqli->query($sql);
 
-$result = $mysqli->query($sql);
-
-if ($result->num_rows == 0) {
-  header("location:invalid_login.php");
-} else {
-
-  $rs = $mysqli->query($sql);
-
-  $row = mysqli_fetch_assoc($rs);
-  if ($row['access_code'] === crypt($access_code, "AB")) {
-
-    $_SESSION['user_name']  = $user_name;
-    $_SESSION['access_code']  = $access_code;
-    $_SESSION['user_type'] = $row['user_type'];
-
-    $_userType = $row['user_type'];
-
-    if ($row['user_type'] == "Domestic") {
-      header("location:index_domestic.php");
-    } else if ($row['user_type'] == "Industrial") {
-      header("location:index_industrial.php");
-    } else if ($row['user_type'] == "Outlet") {
-      header("location:index_outlet.php");
-    } else if ($row['user_type'] == "Admin") {
-      header("location:index_admin.php");
-    }
-  } else {
+  if ($result->num_rows == 0) {
     header("location:invalid_login.php");
+
   }
+   else {
+    
+  //Check whether the user is existing within the database
+  $rs = $mysqli->query($sql);
+    
+    //Check whether the password matches to the user name
+    $row = mysqli_fetch_assoc($rs);
+    if($row['access_code'] === crypt($access_code, "AB")){
+
+      // Start sessions to continue
+      $_SESSION['user_name']  = $user_name;
+      $_SESSION['access_code']  = $access_code;
+      $_SESSION['user_type'] = $row['user_type'];
+
+      $_userType = $row['user_type'];
+
+      if ($row['user_type'] == "Domestic") {
+        header("location:index_domestic.php");
+      }
+      else if ($row['user_type'] == "Industrial") {
+        header("location:index_industrial.php");
+      }
+      else if ($row['user_type'] == "Outlet") {
+        header("location:index_outlet.php");
+      }
+      else if ($row['user_type'] == "Admin") {
+        header("location:index_admin.php");
+      }
+      
+    }
+    else{
+      header("location:invalid_login.php");
+
 }
+
+}
+
+
+
+?>

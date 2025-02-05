@@ -85,7 +85,6 @@ if (isset($_SESSION['payment_success']) && $_SESSION['payment_success'] === true
                             <th>Quantity</th>
                             <th>Cost</th>
                             <th>Scheduled Date</th>
-                            <th>Delivery Status</th>
                             <th>Cylinder Status</th>
                             <th>Payment Status</th>
                             <th>Action</th>
@@ -121,16 +120,6 @@ if (isset($_SESSION['payment_success']) && $_SESSION['payment_success'] === true
                     ?>
                             <td>Rs. <?php echo number_format($cost, 2); ?></td>
                             <td><?php echo $row['scheduled_date']; ?></td>
-                            <td>
-                                <?php 
-                                    $delivery_status = htmlspecialchars($row['delivery_status']); 
-                                    $badgeClass = ($delivery_status === 'Pending') ? 'badge bg-secondary' : 
-                                        (($delivery_status === 'Re-Scheduled') ? 'badge bg-info' : 
-                                        (($delivery_status === 'Dispatched') ? 'badge bg-warning' : 
-                                        (($delivery_status === 'Delivered') ? 'badge bg-success' : 'badge bg-secondary')));
-                                ?>
-                                <span class="<?php echo $badgeClass; ?>"> <?php echo $delivery_status; ?> </span>
-                            </td>
                             <td>
                                 <?php 
                                     $status = htmlspecialchars($row['cylinder_status']); 
