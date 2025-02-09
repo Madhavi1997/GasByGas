@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispatch Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dispatch Manager</h1>
+        
+        <div class="filter-section">
+            <label for="filterStatus">Filter by Status:</label>
+            <select id="filterStatus" onchange="filterRequests()">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+                <option value="reallocated">Reallocated</option>
+            </select>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Customer</th>
+                    <th>Gas Type</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="requestTable">
+                <tr class="pending">
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>LP Gas</td>
+                    <td>2</td>
+                    <td>Pending</td>
+                    <td><button onclick="rescheduleRequest(101)">Reschedule</button></td>
+                </tr>
+                <tr class="completed">
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>Natural Gas</td>
+                    <td>1</td>
+                    <td>Completed</td>
+                    <td>✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function filterRequests() {
+            let filter = document.getElementById("filterStatus").value;
+            let rows = document.querySelectorAll("#requestTable tr");
+            rows.forEach(row => {
+                if (filter === "all" || row.classList.contains(filter)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+        
+        function rescheduleRequest(id) {
+            alert("Request " + id + " has been rescheduled.");
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .filter-section {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</body>
+</html>
